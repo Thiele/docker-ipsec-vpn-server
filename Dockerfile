@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM debian:stable-20190326-slim
 LABEL maintainer="Lin Song <linsongui@gmail.com>"
 
 ENV REFRESHED_AT 2020-01-12
@@ -11,7 +11,7 @@ RUN apt-get -yqq update \
     && DEBIAN_FRONTEND=noninteractive \
        apt-get -yqq --no-install-recommends install \
          wget dnsutils openssl ca-certificates kmod \
-         iproute gawk grep sed net-tools iptables \
+         iproute2 gawk grep sed net-tools iptables \
          bsdmainutils libcurl3-nss \
          libnss3-tools libevent-dev libcap-ng0 xl2tpd \
          libnss3-dev libnspr4-dev pkg-config libpam0g-dev \
